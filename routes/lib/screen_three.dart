@@ -29,6 +29,7 @@ class _ScreenThreeState extends State<ScreenThree> {
           children: [
             InkWell(
               onTap:(){
+                Navigator.pop(context);
                 
               },
               child: Container(
@@ -40,7 +41,7 @@ class _ScreenThreeState extends State<ScreenThree> {
                 ),
                 // color: Colors.purple,
                 child: Center(
-                  child: Text('Screen 3',
+                  child: Text('Screen 2',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,

@@ -43,7 +43,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                 ),
                 // color: Colors.purple,
                 child: Center(
-                  child: Text('Screen 2',
+                  child: Text('Screen 3',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
