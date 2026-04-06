@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:routes/screen_three.dart';
 
-class ScreenTwo extends StatefulWidget {
-  const ScreenTwo({super.key});
+class ScreenThree extends StatefulWidget {
+  const ScreenThree({super.key});
 
   @override
-  State<ScreenTwo> createState() => _ScreenTwoState();
+  State<ScreenThree> createState() => _ScreenThreeState();
 }
 
-class _ScreenTwoState extends State<ScreenTwo> {
+class _ScreenThreeState extends State<ScreenThree> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       appBar: AppBar(
-        title: Text('My Sceond Screen',
+        title: Text('My Third Screen',
         style: TextStyle(
           color: Colors.white,
           fontSize: 22,
@@ -30,8 +29,6 @@ class _ScreenTwoState extends State<ScreenTwo> {
           children: [
             InkWell(
               onTap:(){
-                Navigator.push(context,
-                 MaterialPageRoute(builder: (context) => const ScreenThree()));
                 
               },
               child: Container(
@@ -43,7 +40,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                 ),
                 // color: Colors.purple,
                 child: Center(
-                  child: Text('Screen 2',
+                  child: Text('Screen 3',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
