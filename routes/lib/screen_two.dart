@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:routes/screen_two.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class ScreenTwo extends StatefulWidget {
+  const ScreenTwo({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ScreenTwo> createState() => _ScreenTwoState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MY APP',
+        title: Text('My Sceond Screen',
         style: TextStyle(
           color: Colors.white,
           fontSize: 22,
@@ -30,8 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap:(){
-                Navigator.push(context, 
-                MaterialPageRoute(builder: (context) => const ScreenTwo()));
+                
               },
               child: Container(
                 height: 50,
@@ -42,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 // color: Colors.purple,
                 child: Center(
-                  child: Text('Screen 1',
+                  child: Text('Screen 2',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
