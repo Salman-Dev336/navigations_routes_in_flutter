@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ScreenThree extends StatefulWidget {
-  const ScreenThree({super.key});
+  final String name;
+  final int num;
+  const ScreenThree({super.key, required this.name,  this.num=3});
 
   @override
   State<ScreenThree> createState() => _ScreenThreeState();
@@ -13,7 +15,7 @@ class _ScreenThreeState extends State<ScreenThree> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'My Third Screen',
+          "${widget.name} ${widget.num}",
           style: TextStyle(
             color: Colors.white,
             fontSize: 22,
