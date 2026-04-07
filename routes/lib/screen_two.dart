@@ -16,11 +16,10 @@ class ScreenTwo extends StatefulWidget {
 class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
-    final arguments = ModalRoute.of (context)?.settings.arguments as Map;
+    // final arguments = ModalRoute.of (context)?.settings.arguments as Map;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-         arguments['name'],
+        title: Text('Salman Khan',
           style: TextStyle(
             color: Colors.white,
             fontSize: 22,
@@ -38,12 +37,11 @@ class _ScreenTwoState extends State<ScreenTwo> {
           children: [
             InkWell(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) =>  ScreenThree(
-                    name: 'salman khan',
-                  )),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) =>  ScreenThree()
+                //   ),
+                // );
               },
               child: Container(
                 height: 50,
