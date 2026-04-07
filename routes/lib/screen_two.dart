@@ -16,10 +16,11 @@ class ScreenTwo extends StatefulWidget {
 class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
+    final arguments = ModalRoute.of (context)?.settings.arguments as Map;
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "${widget.name} ${widget.num}",
+         arguments['name'],
           style: TextStyle(
             color: Colors.white,
             fontSize: 22,
