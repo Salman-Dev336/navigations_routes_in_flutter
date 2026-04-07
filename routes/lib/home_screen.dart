@@ -13,12 +13,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('MY APP',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-          ),),
+        title: Text(
+          'MY APP',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.purple,
       ),
@@ -29,9 +31,13 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             InkWell(
-              onTap:(){
-                Navigator.push(context, 
-                MaterialPageRoute(builder: (context) => const ScreenTwo()));
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ScreenTwo(
+                    name: 'Salman Khan',
+                  )),
+                );
               },
               child: Container(
                 height: 50,
@@ -42,18 +48,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 // color: Colors.purple,
                 child: Center(
-                  child: Text('Screen 1',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                  child: Text(
+                    'Screen 1',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  ),
-                      
                 ),
               ),
             ),
-            
           ],
         ),
       ),

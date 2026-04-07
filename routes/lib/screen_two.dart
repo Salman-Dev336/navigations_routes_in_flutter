@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:routes/screen_three.dart';
 
 class ScreenTwo extends StatefulWidget {
-  const ScreenTwo({super.key});
+  String name;
+  ScreenTwo({Key? key, required this.name}): super(key: key);
 
   @override
   State<ScreenTwo> createState() => _ScreenTwoState();
@@ -13,12 +14,14 @@ class _ScreenTwoState extends State<ScreenTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Sceond Screen',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-          ),),
+        title: Text(
+          widget.name.toString(),
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.purple,
       ),
@@ -29,10 +32,11 @@ class _ScreenTwoState extends State<ScreenTwo> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             InkWell(
-              onTap:(){
-                Navigator.push(context,
-                 MaterialPageRoute(builder: (context) => const ScreenThree()));
-                
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ScreenThree()),
+                );
               },
               child: Container(
                 height: 50,
@@ -43,18 +47,17 @@ class _ScreenTwoState extends State<ScreenTwo> {
                 ),
                 // color: Colors.purple,
                 child: Center(
-                  child: Text('Screen 3',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                  child: Text(
+                    'Screen 3',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  ),
-                      
                 ),
               ),
             ),
-            
           ],
         ),
       ),

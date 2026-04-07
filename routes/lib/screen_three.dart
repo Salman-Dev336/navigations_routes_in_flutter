@@ -10,14 +10,16 @@ class ScreenThree extends StatefulWidget {
 class _ScreenThreeState extends State<ScreenThree> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: Text('My Third Screen',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 22,
-          fontWeight: FontWeight.bold,
-          ),),
+        title: Text(
+          'My Third Screen',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
         backgroundColor: Colors.purple,
       ),
@@ -28,9 +30,8 @@ class _ScreenThreeState extends State<ScreenThree> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             InkWell(
-              onTap:(){
+              onTap: () {
                 Navigator.pop(context);
-                
               },
               child: Container(
                 height: 50,
@@ -41,18 +42,17 @@ class _ScreenThreeState extends State<ScreenThree> {
                 ),
                 // color: Colors.purple,
                 child: Center(
-                  child: Text('Screen 2',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                  child: Text(
+                    'Screen 2',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                  ),
-                      
                 ),
               ),
             ),
-            
           ],
         ),
       ),
