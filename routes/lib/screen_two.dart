@@ -1,9 +1,12 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings
+
 import 'package:flutter/material.dart';
 import 'package:routes/screen_three.dart';
 
 class ScreenTwo extends StatefulWidget {
-  String name;
-  ScreenTwo({Key? key, required this.name}): super(key: key);
+   final String name;
+   final int num;
+  ScreenTwo({Key? key, required this.name, this.num=2}): super(key: key);
 
   @override
   State<ScreenTwo> createState() => _ScreenTwoState();
@@ -15,7 +18,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.name.toString(),
+          "${widget.name} ${widget.num}",
           style: TextStyle(
             color: Colors.white,
             fontSize: 22,
