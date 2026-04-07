@@ -1,13 +1,16 @@
-// ignore_for_file: prefer_interpolation_to_compose_strings
-
 import 'package:flutter/material.dart';
-import 'package:routes/screen_three.dart';
+import 'package:routes/utils/route_names.dart';
+import 'package:routes/utils/route_names.dart';
 
 class ScreenTwo extends StatefulWidget {
-  static const String id = 'screen_two';
-   final String name;
-   final int num;
-  ScreenTwo({Key? key, required this.name, this.num=2}): super(key: key);
+  final String name;
+  final int num;
+
+  const ScreenTwo({
+    Key? key,
+    required this.name,
+    this.num = 2,
+  }) : super(key: key);
 
   @override
   State<ScreenTwo> createState() => _ScreenTwoState();
@@ -16,11 +19,11 @@ class ScreenTwo extends StatefulWidget {
 class _ScreenTwoState extends State<ScreenTwo> {
   @override
   Widget build(BuildContext context) {
-    // final arguments = ModalRoute.of (context)?.settings.arguments as Map;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Salman Khan',
-          style: TextStyle(
+        title: Text(
+          widget.name,
+          style: const TextStyle(
             color: Colors.white,
             fontSize: 22,
             fontWeight: FontWeight.bold,
@@ -33,15 +36,16 @@ class _ScreenTwoState extends State<ScreenTwo> {
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Text(
+              'Number: ${widget.num}',
+              style: const TextStyle(fontSize: 18),
+            ),
+            const SizedBox(height: 20),
+
             InkWell(
               onTap: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) =>  ScreenThree()
-                //   ),
-                // );
+                Navigator.pushNamed(context, RouteName.screenThree);
               },
               child: Container(
                 height: 50,
@@ -50,8 +54,7 @@ class _ScreenTwoState extends State<ScreenTwo> {
                   color: Colors.purple,
                   borderRadius: BorderRadius.circular(10.0),
                 ),
-                // color: Colors.purple,
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Screen 3',
                     style: TextStyle(
