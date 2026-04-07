@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:routes/screen_three.dart';
 
 class ScreenTwo extends StatefulWidget {
+  static const String id = 'screen_two';
    final String name;
    final int num;
   ScreenTwo({Key? key, required this.name, this.num=2}): super(key: key);
